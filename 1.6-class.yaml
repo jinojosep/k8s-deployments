@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+  creationTimestamp: null
+  name: managed-nfs-storage
+parameters:
+  archiveOnDelete: "false"
+provisioner: example.com/nfs
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
