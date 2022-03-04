@@ -17,6 +17,8 @@ nodeGroups:
     labels: { role: workers }
     instanceType: t3.xlarge
     desiredCapacity: 2
+    minSize: 2
+    maxSize: 5
     privateNetworking: true
     iam:
       withAddonPolicies:
